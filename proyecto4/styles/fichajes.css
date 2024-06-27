@@ -1,0 +1,76 @@
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 27px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Color de fondo para toda la página */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ 
+}
+
+/* Estilos para el contenido principal */
+.container {
+    background-color: #fff; /* Color de fondo del contenedor */
+    padding: 30px; /* Espaciado interno del contenedor */
+    border-radius: 8px; /* Bordes redondeados del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el contenedor */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    width: 100%;
+    margin: 20px; /* Margen exterior del contenedor */
+}
+
+h2 {
+    color: #333; /* Color del título */
+    margin-bottom: 20px; /* Margen inferior del título */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para los botones de entrada y salida */
+input[name="entrada"] {
+    background-color: #28a745; /* Verde para el botón de entrada */
+}
+
+input[name="salida"] {
+    background-color: #dc3545; /* Rojo para el botón de salida */
+}
+
+input[type="submit"] {
+    color: #fff; /* Color del texto del botón */
+    padding: 12px 20px; /* Relleno interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cursor estilo puntero */
+    text-decoration: none; /* Sin decoración de texto */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    width: 100%; /* Ancho completo */
+    max-width: 200px; /* Ancho máximo del botón */
+    margin-bottom: 10px; /* Margen inferior del botón */
+}
+
+/* Estilos al pasar el mouse sobre los botones */
+input[name="entrada"]:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+input[name="salida"]:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+}
+
+
+a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Sin decoración de texto */
+    margin-top: 10px; /* Margen superior */
+    display: block; /* Hace que el enlace ocupe todo el ancho disponible */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}

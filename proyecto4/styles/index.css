@@ -1,0 +1,80 @@
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2bb292; /* Color de fondo para toda la página */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para el encabezado */
+header {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #222; /* Color de fondo del menú */
+    padding: 10px 0; /* Espaciado interno del menú */
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Color del texto del menú */
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #02ffea; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    background-color: #fff; /* Color de fondo del contenedor */
+    padding: 20px; /* Espaciado interno del contenedor */
+    border-radius: 8px; /* Bordes redondeados del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el contenedor */
+    text-align: center;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    width: 100%;
+    margin-top: 5%; /* Margen superior */
+}
+
+h1 {
+    color: #333; /* Color del título principal */
+    margin-bottom: 20px; /* Margen inferior del título */
+}
+
+.container a {
+    display: block;
+    background-color: #0275d8; /* Color de fondo del enlace */
+    color: white; /* Color del texto del enlace */
+    padding: 15px; /* Espaciado interno del enlace */
+    margin-bottom: 10px; /* Margen inferior del enlace */
+    text-decoration: none; /* Sin decoración de texto */
+    border-radius: 4px; /* Bordes redondeados del enlace */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.container a:hover {
+    background-color: #025aa5; /* Color de fondo del enlace al pasar el mouse */
+}

@@ -1,0 +1,69 @@
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Color de fondo para toda la página */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Estilos para el contenedor */
+.container {
+    background-color: #fff; /* Color de fondo del contenedor */
+    padding: 40px; /* Espaciado interno del contenedor */
+    border-radius: 8px; /* Bordes redondeados del contenedor */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra ligera para el contenedor */
+    text-align: left; /* Alineación del texto a la izquierda */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    width: 100%;
+    margin: 20px;
+}
+
+h2 {
+    color: #333; /* Color del título */
+    margin-bottom: 20px; /* Margen inferior del título */
+    font-size: 28px; /* Tamaño del título */
+    text-align: center; /* Alineación del título */
+}
+
+p {
+    margin-bottom: 12px; /* Margen inferior de los párrafos */
+    line-height: 1.6; /* Altura de línea para mejorar legibilidad */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+strong {
+    font-weight: bold; /* Texto en negrita para elementos strong */
+    color: #555; /* Color del texto en negrita */
+}
+
+button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 12px 20px; /* Relleno interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cursor estilo puntero */
+    text-decoration: none; /* Sin decoración de texto */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    display: inline-block; /* Asegura que el botón no ocupe todo el ancho disponible */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
+}
+
+a {
+    text-decoration: none; /* Sin decoración de texto */
+    color: #007bff; /* Color del enlace */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+a:hover {
+    color: #0056b3; /* Color del enlace al pasar el mouse */
+}

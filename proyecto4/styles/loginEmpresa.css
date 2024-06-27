@@ -1,0 +1,134 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2bb292;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos para el logo */
+#logo {
+    margin: auto;
+}
+
+#logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #222;
+    padding: 10px 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #02ffea;
+}
+
+/* Estilos para el contenedor del formulario */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 5%;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+button a {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover,
+button a:hover {
+    background-color: #4cae4c;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+button a {
+    background-color: #0275d8;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+button a:hover {
+    background-color: #025aa5;
+}
+
+p {
+    color: red;
+    margin-top: 20px;
+}
