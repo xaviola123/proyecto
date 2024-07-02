@@ -38,13 +38,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php include 'menu/menu.php'; ?>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login de Trabajador</title>
     <link rel="stylesheet" href="styles/loginTrabajador.css">
 </head>
 <body>
+<div id="logo">
+            <a href="index.php"><img src="styles/img/logo.png" alt="Logo de la empresa"></a>
+           
+        </div>
     <div class="container">
         <h2>Login de Trabajador</h2>
         <?php if (isset($error)) { echo "<p class='error'>$error</p>"; } ?>

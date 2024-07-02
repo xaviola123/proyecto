@@ -1,61 +1,19 @@
+/* Reset de estilos básicos */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #2bb292;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-image: url("img/foto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2bb292; /* Fallback para navegadores que no soportan imágenes de fondo */
 }
 
-header {
-    color: #fff;
-    width: 100%;
-    text-align: center;
-}
-
-/* Estilos para el logo */
-#logo {
-    margin: auto;
-}
-
-#logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Estilos para el menú de navegación */
-nav {
-    background-color: #222;
-    padding: 10px 0;
-    width: 100%;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #02ffea;
-}
-
-/* Estilos para el contenedor del formulario */
+/* Estilos para el contenedor principal */
 .container {
     background-color: #fff;
     padding: 20px;
@@ -67,11 +25,14 @@ nav ul li a:hover {
     margin-top: 5%;
 }
 
+/* Estilos para el título principal */
 h2 {
     color: #333;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
+/* Estilos para el formulario */
 form {
     display: flex;
     flex-direction: column;
@@ -80,6 +41,7 @@ form {
 label {
     margin-bottom: 5px;
     text-align: left;
+    display: block;
 }
 
 input[type="email"],
@@ -93,8 +55,7 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-input[type="submit"],
-button a {
+input[type="submit"] {
     background-color: #5cb85c;
     color: white;
     padding: 10px;
@@ -103,32 +64,39 @@ button a {
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover,
-button a:hover {
+input[type="submit"]:hover {
     background-color: #4cae4c;
 }
 
-button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-button a {
-    background-color: #0275d8;
-    padding: 10px 20px;
-    border-radius: 4px;
-    display: inline-block;
-}
-
-button a:hover {
-    background-color: #025aa5;
-}
-
-p {
+p.error {
     color: red;
     margin-top: 20px;
+}
+
+/* Estilos para el botón de registro */
+.container button {
+    display: block;
+    background-color: #008CBA; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: 10px; /* Espacio superior */
+    transition: background-color 0.3s ease; /* Transición suave */
+    width: 100%; /* Ancho completo */
+}
+
+.container button:hover {
+    background-color: #005f6b; /* Color de fondo al pasar el cursor */
+}
+
+.container button a {
+    color: white; /* Color del texto del enlace dentro del botón */
+    text-decoration: none; /* Sin subrayado */
 }

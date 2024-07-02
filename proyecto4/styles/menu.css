@@ -18,8 +18,9 @@ header {
 }
 /* Estilos para el logo */
 #logo {
-    margin: auto;
-    background-image: url(img/a.jpg);
+    background-image: url("img/foto.jpg");
+    background-repeat: no-repeat;
+     background-size: cover;
 }
 
 #logo img {

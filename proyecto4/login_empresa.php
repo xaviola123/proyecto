@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
-    include 'config.php'; // Incluir archivo de configuración de la base de datos
+    include 'config.php';
 
     $email = $_POST["email"];
     $pass = $_POST["password"];
@@ -30,12 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 <!DOCTYPE html>
 <html>
 <head>
-<?php include 'menu/menu.php'; ?>
+
     <meta charset="UTF-8">
     <title>Iniciar Sesión - Empresa</title>
     <link rel="stylesheet" href="styles/loginEmpresa.css">
 </head>
 <body>
+<div id="logo">
+            <a href="index.php"><img src="styles/img/logo.png" alt="Logo de la empresa"></a>
+           
+        </div>
     <div class="container">
         <h2>Iniciar Sesión - Empresa</h2>
         <form method="POST">

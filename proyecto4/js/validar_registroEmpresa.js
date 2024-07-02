@@ -1,38 +1,40 @@
-window.onload = function () {
-  // Función para validar el formulario
-  function validarFormulario(event) {
-    // Obtener los valores de los campos del formulario
-    var nombre = document.getElementById("nombre").value.trim();
-    var direccion = document.getElementById("direccion").value.trim();
-    var telefono = document.getElementById("telefono").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var password = document.getElementById("password").value;
+// validar_registroEmpresa.js
 
-    // Expresión regular para validar teléfono (comienza con 6 o 7 y tiene 9 dígitos)
-    var telefonoRegex = /^[6-7]\d{8}$/;
-    // Expresión regular para validar email (formato básico)
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+window.onload = function() {
+    var form = document.querySelector('form');
 
-    // Validar email
-    if (!emailRegex.test(email)) {
-      alert("Por favor, introduce un email válido.");
-      event.preventDefault();
-      return false;
+    form.addEventListener('submit', function(event) {
+        // Validación del teléfono
+        var telefonoInput = document.getElementById('telefono');
+        var telefonoValue = telefonoInput.value.trim();
+        if (!/^([6-7])\d{8}$/.test(telefonoValue)) {
+            alert('El teléfono debe empezar por 6 o 7 y tener 9 dígitos.');
+            event.preventDefault();
+            return;
+        }
+
+        // Validación del email
+        var emailInput = document.getElementById('email');
+        var emailValue = emailInput.value.trim();
+        if (!isValidEmail(emailValue)) {
+            alert('Ingrese un email válido.');
+            event.preventDefault();
+            return;
+        }
+
+        // Validación de la contraseña
+        var passwordInput = document.getElementById('password');
+        var passwordValue = passwordInput.value.trim();
+        if (passwordValue.length < 6) {
+            alert('La contraseña debe tener al menos 6 caracteres.');
+            event.preventDefault();
+            return;
+        }
+    });
+
+    function isValidEmail(email) {
+        // Expresión regular para validar el email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
-
-    // Validar teléfono
-    if (!telefonoRegex.test(telefono)) {
-      alert(
-        "Por favor, introduce un número de teléfono válido (que empiece con 6 o 7 y tenga 9 dígitos)."
-      );
-      event.preventDefault();
-      return false;
-    }
-
-    return true; // Permitir el envío del formulario si todas las validaciones son correctas
-  }
-
-  // Agregar el evento submit al formulario
-  var form = document.querySelector("form");
-  form.addEventListener("submit", validarFormulario);
 };

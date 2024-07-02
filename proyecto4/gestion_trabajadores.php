@@ -58,11 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["agregar"])) {
         echo "Error al agregar trabajador: " . $e->getMessage();
     }
 }
-
-// Mostrar u ocultar la lista de trabajadores según el botón presionado
-//if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["ver_empleados"])) {
-  //  $mostrarTrabajadores = true;
-
     try {
         $stmt = $conn->prepare("SELECT * FROM Trabajadores WHERE empresa_id = ?");
         $stmt->execute([$empresa_id]);
@@ -70,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["agregar"])) {
     } catch (PDOException $e) {
         echo "Error al obtener trabajadores: " . $e->getMessage();
     }
-//}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["ocultar_empleados"])) {
     $mostrarTrabajadores = false;

@@ -9,13 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"]; 
 
     include 'config.php';
-
+    
     try {
         $conn->beginTransaction();
 
         // Generar el hash de la contraseña
         $hashed_password = password_hash($password,PASSWORD_DEFAULT); 
-        // Insertar la empresa con la contraseña hasheada
         $stmt = $conn->prepare("INSERT INTO Empresas (nombre, direccion, telefono, email, pass) VALUES (?, ?, ?, ?, ?)");
         $stmt->execute([$nombre, $direccion, $telefono, $email, $hashed_password]);
 
@@ -25,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $conn->commit();
         $_SESSION["empresa_id"] = $empresa_id;
-        $_SESSION['empresa_nombre'] = $nombre; // Guardar el nombre de la empresa en la sesión
+        $_SESSION['empresa_nombre'] = $nombre; 
         header("Location: login_empresa.php");
-        exit(); // Asegurar que el script se detenga después de redirigir
+        exit(); 
     } catch (PDOException $e) {
         $conn->rollBack();
         echo "Error: " . $e->getMessage();
@@ -40,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Registro de Empresa</title>
     <link rel="stylesheet" href="styles/registroEmpresa.css">
-    <script src="/js/validar_registroEmpresa.js"></script>
+   
 </head>
 <body>
     <h2>Registro de Nueva Empresa</h2>
@@ -58,4 +57,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Registrar Empresa">
     </form>
 </body>
+<script src="js/validar_registroEmpresa.js"></script>
 </html>
